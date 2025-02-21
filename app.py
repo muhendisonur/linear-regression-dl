@@ -26,6 +26,6 @@ for epoch in range(n_epoch):
         w -= lr * w.grad
     w.grad.zero_()
     if((epoch+1) % 10 == 0):
-        print(f"Epoch: {epoch+1}, loss: {l.item():.2f}")
+        print(f"Epoch: {epoch+1}, loss: {l.item():.2f}, weight: {w.item():.2f}")
 
 print(f"Y: {Y} \nY_pred: {forward(X)}")
